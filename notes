@@ -1,0 +1,73 @@
+    1  vagrant --version
+    2  docker ps
+    3  sudo su
+    4  /.,>
+    5  pwd
+    6  systemctl status docker
+    7  docker ps
+    8  sudo su
+    9  docker ps
+   10  usermod -a -G docker admin
+   11  docker ps
+   12  sudo su
+   13  whoami
+   14  docker network create devel
+   15  docker run --name app1 --network devel -v /home/$USER/docker-volumes/nginx/app1/html:/usr/share/nginx/html/ -v /home/$USER/docker-volumes/nginx/app1/nginx/app1/nginx.conf:/etc/nginx/nginx.conf -d nginx
+   16  docker run --name app1 --network devel -v /home/$USER/docker-volumes/nginx/app1/html:/usr/share/nginx/html/ -v /home/$USER/docker-volumes/nginx/app1/nginx.conf:/etc/nginx/nginx.conf -d nginx
+   17  pwd
+   18  docker images
+   19  docker ps
+   20  docker containers ls -a
+   21  docker containers ls 
+   22  docker container -l
+   23  docker container -ls
+   24  docker container ls
+   25  docker container ls -a
+   26  docker container rm  app1
+   27  docker container ls -a
+   28  docker run --name app1 --network devel -v /home/$USER/docker-volumes/nginx/app1/html:/usr/share/nginx/html/ -v /home/$USER/docker-volumes/nginx/app1/nginx.conf:/etc/nginx/nginx.conf -d nginx
+   29  docker run --name app2 --network devel -v /home/$USER/docker-volumes/nginx/app2/html:/usr/share/nginx/html/ -v /home/$USER/docker-volumes/nginx/app2/nginx.conf:/etc/nginx/nginx.conf -d nginx
+   30  docker container ls -a
+   31  docker run --name mynginx --network devel --volume /home/\$USER/docker-volumes/nginx/lb/nginx.conf:/etc/nginx/nginx.conf -p 80:80 -d nginx
+   32  docker container ls -a
+   33  docker container rm  mynginx
+   34  docker run --name mynginx --network devel --volume /home/$USER/docker-volumes/nginx/lb/nginx.conf:/etc/nginx/nginx.conf -p 80:80 -d nginx
+   35  pwd
+   36  cat /home/$USER/docker-volumes/nginx/lb/nginx.conf
+   37  pwd
+   38  docker container ls -a
+   39  history
+   40  pwd
+   41  docker run --name mynginx -p 80:80 -d nginx
+   42  docker --help
+   43  docker stop mynginx
+   44  docker run --name mynginx -p 80:80 -d nginx
+   45  docker container ls -a
+   46  ps -fea | grep nginx
+   47  ls
+   48  docker logs -f mynginx
+   49  docker run --name mynginx -p 80:80 -d nginx
+   50  docker container rm  mynginx
+   51  docker run --name mynginx -p 80:80 -d nginx
+   52  docker container rm  mynginx
+   53  docker container rm  -f mynginx
+   54  docker run --name mynginx --network devel --volume /home/$USER/docker-volumes/nginx/lb/nginx.conf:/etc/nginx/nginx.conf -p 80:80 -d nginx
+   55  pwd
+   56  curl -v localhost:80
+   57  docker logs -f mynginx
+   58  pwd
+   59  docker logs -f app1
+   60  docker logs -f app2
+   61  docker logs -f app1
+   62  docker logs -f app2
+   63  pwd
+   64  ls
+   65  docker exec -it app1 /bin/bash
+   66  docker network inspect
+   67  docker network inspect devel
+   68  ps -aux | grep nginx
+   69  pwd
+   70  ll
+   71  docker container list -a
+   72  docker container restart mynginx
+   73  history
