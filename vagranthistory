@@ -1,0 +1,37 @@
+    1  history
+    2  docker service ls
+    3  docker service scale viz=0
+    4  docker service scale viz=1
+    5  docker service ls
+    6  pwd
+    7  ls
+    8  pwd
+    9  exit
+   10  ll
+   11  docker service create   --with-registry-auth   --name my_custom_app   -p 3000:3000   registry.example.com:5000/myapp:latest
+   12  docker service ls
+   13  ll
+   14  docker service ls
+   15  docker service ps my_custom_app
+   16  exit
+   17  docker service ls
+   18  wget
+   19  curl -k -u vagrant:vagrant https://registry.example.com:5000/v2/myapp/tags/list
+   20  docker service ls
+   21  ll
+   22  exit
+   23  docker service ls
+   24  docker service ps my_custom_app
+   25  docker login -u vagrant -p vagrant https://registry.example.com:5000
+   26  docker service create   --with-registry-auth   --name my_custom_app   -p 3000:3000   registry.example.com:5000/myapp:latest
+   27  docker service la
+   28  docker service ls
+   29  docker service logs -f my_custom_app
+   30  wget localhost:3000/myapp
+   31  docker service ps my_custom_app
+   32  docker service logs -f my_custom_app
+   33  docker service scale my_custom_app=3
+   34  docker service logs -f my_custom_app
+   35  docker service ps my_custom_app
+   36  docker service logs -f my_custom_app
+   37  history > historyvagrant.txt
