@@ -1,0 +1,73 @@
+    1  history
+    2  docker service ls
+    3  docker service scale viz=0
+    4  docker service scale viz=1
+    5  docker service ls
+    6  pwd
+    7  ls
+    8  pwd
+    9  exit
+   10  ll
+   11  docker service create   --with-registry-auth   --name my_custom_app   -p 3000:3000   registry.example.com:5000/myapp:latest
+   12  docker service ls
+   13  ll
+   14  docker service ls
+   15  docker service ps my_custom_app
+   16  exit
+   17  docker service ls
+   18  wget
+   19  curl -k -u vagrant:vagrant https://registry.example.com:5000/v2/myapp/tags/list
+   20  docker service ls
+   21  ll
+   22  exit
+   23  docker service create --with-registry-auth --name name_service registry.example.com:5000/node/greetings:1
+   24  docker status
+   25  docker images
+   26  docker status
+   27  docker ps
+   28  docker ps list
+   29  docker service ls
+   30  docker halt name_service
+   31  docker -halt name_service
+   32  docker stop name_service
+   33  docker service ls
+   34  docker service rm name_service
+   35  s
+   36  docker service ls
+   37  docker images
+   38  docker service ls
+   39  docker images
+   40  docker ps
+   41  docker images ls
+   42  docker images l
+   43  docker images
+   44  name_service
+   45  docker service ls
+   46  exit
+   47  docker service create --with-registry-auth --name greetings registry.example.com:5000/node/greetings:1
+   48  docker service create --with-registry-auth --name name_service registry.example.com:5000/node/echo:1.1
+   49  docker service ls
+   50  docker service rm greetings
+   51  docker service create --with-registry-auth --name greetings -p 8080:3000 registry.example.com:5000/node/greetings:1
+   52  docker service ls
+   53  docker service logs greetings
+   54  docker network create skynet
+   55  docker network connect skynet greetings
+   56  docker network connect skynet q1ety7em0f4c
+   57  docker network connect skynet --alias greetings
+   58  docker network connect skynet name_service
+   59  docker service ls
+   60  docker network connect skynet name_service
+   61  docker service network connect skynet name_service
+   62  docker network ls
+   63  docker network connect ingress name_service
+   64  docker ps
+   65  docker network create -d overlay paconet
+   66  docker network ls
+   67  docker network connect paconet greetings
+   68  docker service ls
+   69  docker service update --network-add paconet greetings
+   70  docker service update --network-add paconet name_service
+   71  docker service logs greetings
+   72  docker service logs name_service
+   73  history > cluster2apps.txt
